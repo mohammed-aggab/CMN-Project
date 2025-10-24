@@ -1,0 +1,206 @@
+/* =========================================================
+   NG.css – Style personnel pour NG Cake-Design & Pastries
+   ========================================================= */
+
+/* Keep team header style, only prevent overlap */
+.ng-body, .presentation, .galerie, .evenement, .contact {
+  all: revert;
+}
+
+/* --- Corps principal --- */
+.ng-body {
+  background-color: lab(72.19% -22.76 -16.4);
+  padding: 30px;
+  font-family: 'Georgia', serif;
+  color: lab(44.35% 75.52 -36.46);
+  line-height: 1.6;
+  
+  margin: auto;
+}
+
+/* --- Présentation --- */
+.presentation {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.presentation h1 {
+  color: #b30059;
+  font-size: 2.3em;
+  margin-bottom: 10px;
+}
+
+.presentation h2 {
+  color: #444;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.presentation p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-size: 1.05em;
+}
+
+.main-photo {
+  display: block;
+  margin: 25px auto;
+  width: 70%;
+  max-width: 700px;s
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Galerie --- */
+.galerie {
+  background-color: hsl(64, 86%, 49%);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.galerie h2 {
+  text-align: center;
+  color: #f20c9adb;
+  font-size: 1.7em;
+  margin-bottom: 20px;
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.photos img {
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Événements --- */
+.evenement {
+  text-align: center;
+  color: #cedb15;
+  background-color: lab(45.51% 4.75 -49.08);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 8px #eae70ae7;
+}
+
+.evenement h2 {
+  color: hsl(187, 85%, 49%);
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.evenement p {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+/* --- Contact --- */
+.contact {
+  text-align: center;
+  background-color: lab(92.23% -23.37 87.99);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(5, 5, 5, 0.1);
+}
+
+.contact h2 {
+  color: #b30059;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  font-size: 1.05em;
+}
+
+.contact a {
+  color: #b30059;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* --- Section Poster (nouvelle galerie de 6 images) --- */
+.poster-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.poster-section a {
+  display: inline-block;
+  font-weight: bold;
+  color: lab(78.01% 7.13 79.61); /* doré */
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.poster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.poster img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px hwb(57 1% 6% / 0.934);
+  transition: transform 0.3s ease;
+}
+
+.poster img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Bande turquoise entre Événements et Contact --- */
+.message-turquoise {
+  background-color: rgb(102, 205, 209); /* turquoise doux */
+  text-align: center;
+  padding: 25px;
+  margin: 40px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.message-turquoise p {
+  color: #b30059; /* texte noir pour bien contraster */
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- Navigation et défilement fluide --- */
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+:target {
+  scroll-margin-top: 100px;
+}

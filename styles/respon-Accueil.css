@@ -1,0 +1,140 @@
+/* ===== Grille adaptative cartes / présentation ===== */
+@media (max-width: 900px) {
+  .presentation { grid-template-columns: 1fr; }
+  .subject { grid-template-columns: 1fr; }
+  .contener { width: 100%; height: auto; }
+}
+
+/* ===== Mode mobile (≤ 770px) : header + nav + footer ===== */
+@media (max-width: 770px) {
+  .header {
+    position: relative;
+    height: 70px;
+    padding: 0 14px;
+    justify-content: flex-start; /* logo à gauche */
+  }
+
+  /* Afficher le burger en mobile */
+  .hamburger { display: block !important; }
+
+  /* Cacher la nav par défaut en mobile */
+  .header .nav {
+    display: none !important;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: #2F48C7;
+    flex-direction: column;
+    padding: 10px 14px 16px;
+    gap: 8px;
+    border-top: 1px solid rgba(255,255,255,.25);
+    z-index: 900;
+  }
+
+  /* Afficher la nav quand la case est cochée */
+  #nav-toggle:checked ~ .nav { display: flex !important; }
+
+  /* Liens touch-friendly */
+  .nav a {
+    padding: 12px 6px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+  .nav a:hover {
+    text-decoration: none;
+    background: rgba(255,255,255,.08);
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Footer mobile : tout centré, logo sous le texte */
+  footer.footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer.footer .logo {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* (Optionnel) ≥ 771px : forcer nav desktop + burger masqué */
+@media (min-width: 771px) {
+  .header .nav { display: flex !important; }
+  .hamburger { display: none !important; }
+}
+
+
+/* ===== Mode tablette (771px → 1024px) ===== */
+@media (min-width: 771px) and (max-width: 1024px) {
+  /* Header */
+  .header {
+    height: 90px;
+    padding: 0 20px;
+  }
+  /* Sur tablette, on garde la nav visible et on masque le burger */
+  .header .nav { display: flex !important; gap: 24px; }
+  .hamburger { display: none !important; }
+
+  .nav a {
+    font-size: 18px;
+  }
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Titres */
+  .title h1 { font-size: 40px; }
+  .title-subject { font-size: 32px; }
+  .title-presentation { font-size: 32px; }
+
+  /* Présentation : 2 colonnes confortables */
+  .presentation {
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+    padding: 0 24px;
+  }
+
+  /* Cartes : 2 colonnes */
+  .subject {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    padding: 0 24px;
+  }
+  .contener {
+    width: 100%;
+    height: auto;
+  }
+  .thumb { height: 160px; }
+
+  /* Paragraphes un peu plus lisibles */
+  .para,
+  .card-text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Footer : respiration et logo à droite */
+  footer.footer {
+    padding: 24px;
+    gap: 16px;
+  }
+  footer.footer .nav-footer {
+    column-gap: 60px;
+    row-gap: 14px;
+    min-width: 0;
+  }
+  footer.footer .logo {
+    width: 80px;
+    height: 80px;
+    margin-left: auto; /* reste bien à droite */
+  }
+  footer.footer .copyright {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,151 @@
+:root {
+    --color-main: #2B2B2B;
+    --policy-color: white;
+    --link-footer: yellow;
+    --policy-size: 1vw;
+    
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+.title-gnu {
+    display: flex;
+    justify-content:  center;
+    
+    font-family: 'Blox (BRK)';
+    font-size: 5vw;
+    background-color: var(--color-main);
+    color: var(--policy-color);
+    margin-top: 0;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+
+    
+}
+.box {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+ 
+background-color: var(--color-main);
+font-family: 'Minecraft';
+color: var(--policy-color);
+font-size: var(--policy-size);
+padding-top: 2vh;
+padding-bottom: 2vh;
+box-shadow: 2px 2px 2px 2px rgba(255,255,255,0.75);
+
+
+}
+.screen {
+    
+    max-height: 8vh;
+    max-width: 8vw;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+}
+a {
+    color: var(--link-footer);
+    text-decoration: none;
+}
+.info {
+    
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    
+}
+main {
+    background-color: var(--color-main);
+}
+#rms {
+    box-shadow: 2px 2px 2px 2px rgba(65,105,225,0.75);
+}
+#guix {
+    box-shadow: 2px 2px 2px 2px rgba(242,127,82,0.75);
+}
+#hurd {
+    box-shadow: 2px 2px 2px 2px rgba(151,252,158,0.75);
+}
+#emacs {
+    box-shadow: 2px 2px 2px 2px rgba(230,121,247,0.75);
+}
+#parabola {
+    box-shadow: 2px 2px 2px 2px rgba(247,230,130,0.75);
+}
+#trisquel {
+
+    box-shadow: 2px 2px 2px 2px rgba(109,228,235,0.75);
+}
+#linux-libre {
+    box-shadow: 2px 2px 2px 2px rgba(255,62,231,0.75);
+}
+#gimp {
+    box-shadow: 2px 2px 2px 2px rgba(222,10,10,0.75);
+}
+
+.titleMovie {
+    display: flex;
+    justify-content: center;
+    font-family: 'Minecraft';
+    color: var(--policy-color);
+    font-size: 5vh;
+    padding-top: 2vh;
+
+}
+.movie {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-right: 2vw;
+    width: 100%;
+    height: 100%;
+    
+
+}
+@media screen and (min-width: 350px)  and (max-width: 1280px){
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+    .info{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    p {
+        font-size: 5vw;
+        margin-left: 2vw;
+        color: orangered;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        font-size: 5vw;
+        padding-bottom: 10px;
+    }
+    .screen {
+        display: none;
+    }
+    h4 {
+        display: flex;
+        justify-content: center;
+        color: royalblue;
+        padding-top: 10px;
+        
+        font-size: 5vw;
+    }
+    .title {
+        font-size: 8vw;
+    }
+    
+}
+
+
+    
+
